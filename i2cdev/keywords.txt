@@ -1,0 +1,32 @@
+# Syntax Coloring Map For i2cdev W.Sp.
+#######################################
+ 
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+ 
+i2cdev KEYWORD1
+ 
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+ 
+begin   	KEYWORD2
+detect  	KEYWORD2
+wrLCD4Bit   KEYWORD2
+wr      	KEYWORD2
+rd      	KEYWORD2
+setBit      KEYWORD2
+mapData 	KEYWORD2
+LCDinit  	KEYWORD2
+LCDdir   	KEYWORD2
+LCDin4   	KEYWORD2
+LCDin8   	KEYWORD2
+LCDout4   	KEYWORD2
+LCDout8   	KEYWORD2
+LCDcursor  	KEYWORD2
+
+ 
+#######################################
+# Constants (LITERAL1)
+#######################################

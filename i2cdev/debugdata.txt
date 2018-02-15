@@ -1,0 +1,29 @@
+out data<81>,
+1.hi:<0x2> 2.lo:<0x10>
+
+out data<42>,
+1.hi:<0x4>2.lo:<0x8>
+
+out data<24>,
+1.hi:<0x8> 2.lo:<0x4>
+
+out data<18>,
+1.hi:<0x10> 2.lo:<0x2>
+
+out data<81>,
+1.hi:<0x2>2.lo:<0x10>
+
+out data<42>,
+1.hi:<0x4> 2.lo:<0x8>
+
+out data<24>,
+1.hi:<0x8> 2.lo:<0x4>
+
+out data<18>,
+1.hi:<0x10>2.lo:<0x2>
+
+out data<81>,
+1.hi:<0x2> 2.lo:<0x10>
+
+out data<42>,
+1.hi:<0x4> 2.lo:<0x8>
