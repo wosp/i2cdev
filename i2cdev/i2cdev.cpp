@@ -121,7 +121,17 @@ return ret;
 }
 
 
-
+/*
+setting a single bit of OLATA and OLATB
+port : register of MCP23017 this version shadows OLATB, OLATA
+bitnr: number of bit 0...7
+value: 1 or 0
+example: 
+        mcp23017.setBit(OLATB,7,1);
+        delay(500);
+        mcp23017.setBit(OLATB,6,1);
+        delay(500);
+*/
 void i2cdev::setBit(unsigned char port, unsigned char bitnr,unsigned char value){
 unsigned char mask;
 mask= 1<< bitnr;
