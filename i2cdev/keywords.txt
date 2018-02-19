@@ -17,6 +17,7 @@ wrLCD4Bit   KEYWORD2
 wr      	KEYWORD2
 rd      	KEYWORD2
 setBit      KEYWORD2
+getBit      KEYWORD2
 mapData 	KEYWORD2
 LCDinit  	KEYWORD2
 LCDdir   	KEYWORD2

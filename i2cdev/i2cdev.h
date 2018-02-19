@@ -226,9 +226,9 @@ MCP23017    HD44780
 #define LCD_COLSIZE 16   //               ""
 
 class i2cdev {
-private:
+private:  
 // changes of other wiring configuration between an HD44780 and a MCP23017 made in
-// the followung table. This table maps the wiring between MCP23018 and HD44780 LCD 
+// the following table. This table maps the wiring between MCP23018 and HD44780 LCD 
 // using 4Bit Interface. 
 //         MCU databits:          D0    D1    D2    D3    D4    D5    D6    D7
 	unsigned char wiredP[8] = { GPB4, GPB3, GPB2, GPB1, GPB4, GPB3, GPB2, GPB1 };
@@ -248,6 +248,8 @@ public:
     void LCDbacklite(unsigned char);
     char LCDcursor(unsigned char,
                    unsigned char);			// write 4 data bits to HD44780
+	unsigned char getBit(unsigned char,
+		        unsigned char);
 	void setBit(unsigned char, 
 				unsigned char,
 				unsigned char);
