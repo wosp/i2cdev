@@ -122,33 +122,47 @@ return ret;
 
 
 /*
+getting a single bit of MCP-Rgister i.e. GPIOA and GPIOB
+port : register of MCP23017 this version shadows OLATB, OLATA
+bitnr: number of bit 0...7
+return:  1 or 0
+example: 
+        unsigned char value=mcp23017.getBit(GPIOA,7);
+*/
+unsigned char i2cdev::getBit(unsigned char port, unsigned char bitnr){
+unsigned char value;
+value=rd(port);
+value = bitnr >> value;
+return;
+}
+
+/*
 setting a single bit of OLATA and OLATB
 port : register of MCP23017 this version shadows OLATB, OLATA
 bitnr: number of bit 0...7
 value: 1 or 0
-example: 
-        mcp23017.setBit(OLATB,7,1);
-        delay(500);
-        mcp23017.setBit(OLATB,6,1);
-        delay(500);
+example:
+mcp23017.setBit(OLATB,7,1);
+delay(500);
+mcp23017.setBit(OLATB,6,1);
+delay(500);
 */
-void i2cdev::setBit(unsigned char port, unsigned char bitnr,unsigned char value){
-unsigned char mask;
-mask= 1<< bitnr;
-if (port==OLATA) {  
-	if (value >0)	shadowOLATA	=	shadowOLATA	|  mask;
-	else			shadowOLATA	=	shadowOLATA & ~mask;
-    wr(OLATA,shadowOLATA);
-}
+void i2cdev::setBit(unsigned char port, unsigned char bitnr, unsigned char value) {
+	unsigned char mask;
+	mask = 1 << bitnr;
+	if (port == OLATA) {
+		if (value >0)	shadowOLATA = shadowOLATA | mask;
+		else			shadowOLATA = shadowOLATA & ~mask;
+		wr(OLATA, shadowOLATA);
+	}
 
-if (port==OLATB) {
-	if (value >0)	shadowOLATB	=	shadowOLATB	|  mask;
-	else			shadowOLATB	=	shadowOLATB & ~mask;
-    wr(OLATB,shadowOLATB);
+	if (port == OLATB) {
+		if (value >0)	shadowOLATB = shadowOLATB | mask;
+		else			shadowOLATB = shadowOLATB & ~mask;
+		wr(OLATB, shadowOLATB);
+	}
+	return;
 }
-return;
-}
-
 
 
 // Wrapper for wiring of MCP23017 with HD44780 on Adafruit's RGB_LCD from https://www.adafruit.com/product/714
