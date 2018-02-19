@@ -1,8 +1,9 @@
 /* 
-* Author :  W.Spiess
-* Date   :  30012018
-* Version:  1.0
-* File   :  i2cdev.cpp
+* Author 		:  W.Spiess
+* Date   		:  30012018
+* Last Change	:  19022018
+* Version		:  1.0
+* File   		:  i2cdev.cpp
 * ------------
 *
 *
